@@ -1,0 +1,19 @@
+{
+  "run_id": "sens_costs.lost_sale_per_case_25.0_d283f7a48c",
+  "rows": 100,
+  "n_paths": 50,
+  "seed": 20261118,
+  "arms": [
+    "B1",
+    "OPT"
+  ],
+  "kpi_sha256": "c5b2aa7b268185366e5a0c69e82083207070b16d45401062bbad62efe453c346",
+  "wall_s": 182.5,
+  "workers": 14,
+  "checker_violations_total": 1,
+  "fallback_weeks_total": 0,
+  "label": "simulation on a synthetic plant model",
+  "git_hash": null,
+  "git_dirty": true,
+  "source_sha256": "0404b9ffb255f6b079f959317564993c342d17de5d863919aec48f95e29f21c4"
+}

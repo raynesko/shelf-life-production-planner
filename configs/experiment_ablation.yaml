@@ -1,0 +1,9 @@
+# Ablation (T5.1.3): forecast vs optimisation contribution. Same paths (CRN) as main.
+name: ablation
+arms: [B1, B1_SELFC, OPT_MA4, OPT]
+replay: true
+monte_carlo:
+  n_paths: 200
+  seed: 20261118
+workers: 14
+overrides: {}

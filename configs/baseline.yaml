@@ -1,0 +1,4 @@
+note: B1 cover chosen on the VALIDATION year by scripts/tune_baseline_validation.py
+  (ADR-009).
+cover_weeks: 0.5
+reorder_weeks: 1.0

@@ -1,0 +1,31 @@
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+# data (Kaggle terms: no redistribution; never commit tokens)
+data/raw/*
+data/interim/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+kaggle.json
+.env
+# large generated results (small app_data and headline json are committed)
+results/experiments/*
+!results/experiments/.gitkeep
+results/logs/*
+!results/logs/.gitkeep
+*.lp.tmp
+# Derived from Kaggle competition data; not committed until redistribution terms are confirmed (rebuild: python -m shelflife.data.favorita)
+data/processed/demand_weekly.parquet
+results/forecast/cache/
+# Per-week files that carry (scaled) Favorita demand: same redistribution rule as demand_weekly.parquet.
+# Rebuild: run_benchmarks -> run_stat_models -> select_forecasts -> run_rolling_replay.
+results/forecast/*_forecasts.parquet
+results/forecast/forecasts_*.parquet
+results/*_weeks.parquet
+# per-run folders of the sensitivity sweep; the aggregated results/sensitivity/*.parquet hold the same KPIs
+results/sensitivity/runs/
+*.egg-info/

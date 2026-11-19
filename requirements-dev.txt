@@ -1,0 +1,6 @@
+pytest>=8
+hypothesis>=6
+ruff>=0.4
+jupyter>=1.0
+nbformat>=5
+playwright>=1.40  # app screenshots only (scripts/screenshot_app.py), uses the installed Edge/Chrome

@@ -1,0 +1,20 @@
+# T5.2.1 one-at-a-time sensitivity. Reduced N per cell (main experiment uses the pilot-chosen N).
+# All cells: same seed -> common random numbers within and across cells; arms paired per path.
+# Labels: simulation on a synthetic plant model.
+n_paths: 50
+seed: 20261118
+workers: 14
+arms: [B1, OPT]            # B1_TUNED (ADR-009) appended with --append-arms B1_TUNED
+sweeps:
+  shelf_life_scale: [0.5, 0.75, 1.0, 1.25]        # -50/-25/0/+25 %; 0.5 puts 14-day SKUs at 7 days (outside the
+                                                   #   14-56 d design range; kept as a stress test, flagged in findings)
+  changeover_scale: [0.5, 1.0, 1.5, 2.0]
+  error_scale: [0.5, 1.0, 1.5, 2.0]
+  demand_scale: [0.828, 0.946, 1.005, 1.065, 1.124]   # mean utilisation ~70/80/85/90/95 % (= u / 0.8454 achieved)
+  msl: [0.3, 0.5, 0.7]
+  costs.expiry_per_case: [2.0, 4.0, 10.0]
+  costs.changeover_per_hour: [200.0, 400.0, 800.0]
+  costs.lost_sale_per_case: [25.0, 40.0, 80.0]
+frontier:                      # waste vs fill rate at matched service: each arm swept along its own lever
+  B1: {b1_cover: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]}
+  OPT: {alpha: [0.80, 0.90, 0.95, 0.975, 0.99]}

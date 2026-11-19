@@ -1,0 +1,39 @@
+name: sens_shelf_life_scale_0.75
+arms:
+- B1
+- OPT
+replay: false
+workers: 14
+monte_carlo:
+  n_paths: 50
+  seed: 20261118
+overrides:
+  shelf_life_scale: 0.75
+overrides_resolved:
+  alpha: 0.95
+  b1_cover: 1.0
+  changeover_scale: 1.0
+  costs: {}
+  demand_scale: 1.0
+  error_scale: 1.0
+  msl: null
+  shelf_life_scale: 0.75
+planner:
+  note: Chosen on the VALIDATION year by scripts/tune_planner_validation.py (ADR-007);
+    test year not read.
+  variant: min
+  mode: approx
+  changeover_est:
+    SKU-01: 1.0
+    SKU-02: 1.0
+    SKU-03: 1.0
+    SKU-04: 1.0
+    SKU-05: 1.0
+    SKU-06: 1.0
+    SKU-07: 1.0
+    SKU-08: 1.0
+    SKU-09: 1.0
+    SKU-10: 1.0
+    SKU-11: 1.0
+    SKU-12: 1.0
+scenario_center: actual (ADR-008)

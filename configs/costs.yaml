@@ -1,0 +1,9 @@
+# Objective weights for the optimiser (cost units per case or per hour). ALL ARE ASSUMPTIONS.
+# They steer trade-offs only; no dollar figure from this file may appear in any result or resume claim.
+# Ratios matter more than levels; swept in T5.2.1 (cost-weight ratios).
+production_per_case: {value: 18.0, source: "assumption = sku_defaults.unit_cost_per_case", range: [10, 30]}
+holding_per_case_week: {value: 0.25, source: "assumption (~1.4%/week of unit cost: refrigerated storage + capital)", range: [0.1, 0.5]}
+expiry_per_case: {value: 4.0, source: "assumption (disposal + handling; production cost is already sunk in production_per_case)", range: [2, 10]}
+lost_sale_per_case: {value: 40.0, source: "assumption (lost margin + customer service penalty; must exceed production cost so serving demand pays)", range: [25, 80]}
+changeover_per_hour: {value: 400.0, source: "assumption (crew labour, cleaning chemicals, water, lost line time)", range: [200, 800]}
+safety_stock_shortfall_per_case: {value: 2.0, source: "assumption (soft penalty; used from T4.3.1)", range: [0.5, 5]}

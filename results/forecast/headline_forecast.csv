@@ -1,0 +1,9 @@
+model,test_wape,improvement_of_selected_vs_this_pct
+selected_per_sku,11.5,0.0
+arima,11.79,2.461
+arima52,11.704,1.743
+ets,11.111,-3.499
+ma4,11.482,-0.154
+naive,12.254,6.155
+prophet_hol,11.952,3.78
+seasonal_naive,17.6,34.657

@@ -1,0 +1,2 @@
+arm,expired_cases,expired_pct,fill_rate,lost_cases,stockout_sku_weeks,changeover_hours,allergen_clean_hours,utilisation,weeks_of_cover,mean_age_ship,end_inventory_cases,capacity_breach_weeks,checker_violations,window,scale_factor,alpha,mode,changeover_est,time_limit_s,fallback_weeks,repair_weeks,max_gap,mean_solve_s,runtime_s
+optimised,4156.346,0.7898,0.9928,3769.3363,37.0,788.0,539.0,0.7177,0.5731,0.5138,3677.7536,0.0,0,2016-04-04..2017-03-27,0.198324,0.95,approx,min,60,0,1,0.017795728082963928,0.47152813846388686,26.7

@@ -1,0 +1,13 @@
+sku_id,name,family,item_nbr,mean_units_wk,cv,zero_week_share,trend_last_vs_first_year,lag52_autocorr,weeks_with_closure_day,gap_weeks_imputed
+SKU-01,Plain yogurt cup,DAIRY,939207,5192,0.171,0.0,0.95,0.32,4,6
+SKU-02,Strawberry yogurt cup,DAIRY,1083196,4716,0.123,0.0,0.85,0.34,4,0
+SKU-03,Cream cheese spread,DAIRY,838216,4652,0.148,0.0,0.72,0.51,4,0
+SKU-04,Dessert pudding cup,DAIRY,1083152,4523,0.121,0.0,0.87,0.37,4,0
+SKU-05,Classic hummus,DELI,866927,5303,0.196,0.0,1.45,0.43,4,3
+SKU-06,Tzatziki dip,DELI,828630,4742,0.152,0.0,1.1,0.19,4,3
+SKU-07,Basil pesto,DELI,1121615,2877,0.252,0.027,1.39,0.27,4,0
+SKU-08,Guacamole,DELI,319093,2692,0.223,0.0,1.0,0.19,4,0
+SKU-09,Pasta salad,PREPARED FOODS,885543,5423,0.266,0.0,1.91,0.81,4,0
+SKU-10,Egg salad,PREPARED FOODS,514327,4994,0.102,0.0,0.98,0.13,4,6
+SKU-11,Tuna salad,PREPARED FOODS,426155,3148,0.359,0.0,0.77,0.17,4,0
+SKU-12,Vegetable soup,PREPARED FOODS,557420,3136,0.083,0.0,1.02,0.16,4,0

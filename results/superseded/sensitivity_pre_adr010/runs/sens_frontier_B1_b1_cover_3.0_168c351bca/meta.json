@@ -1,0 +1,18 @@
+{
+  "run_id": "sens_frontier_B1_b1_cover_3.0_168c351bca",
+  "rows": 50,
+  "n_paths": 50,
+  "seed": 20261118,
+  "arms": [
+    "B1"
+  ],
+  "kpi_sha256": "e43d1ae5b18e1b47ea3235e78dc57d0f5722e57a643584ca5a294828c6bc5d71",
+  "wall_s": 3.4,
+  "workers": 14,
+  "checker_violations_total": 0,
+  "fallback_weeks_total": 0,
+  "label": "simulation on a synthetic plant model",
+  "git_hash": null,
+  "git_dirty": true,
+  "source_sha256": "0404b9ffb255f6b079f959317564993c342d17de5d863919aec48f95e29f21c4"
+}

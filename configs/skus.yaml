@@ -1,0 +1,85 @@
+rule: perishable=1, families ['DAIRY', 'DELI', 'PREPARED FOODS'], non-zero in >= 95%
+  of full weeks up to 2017-03-27 (ADR-005) and in each of the last 13 weeks, top 4
+  by total units per family; mapped to plant SKUs in family order
+source_stats:
+  negative_rows_clipped: 513
+  rows_kept: 13875808
+  rows_read: 125497040
+gap_weeks_imputed:
+  SKU-01: 6
+  SKU-05: 3
+  SKU-06: 3
+  SKU-10: 6
+skus:
+- sku_id: SKU-01
+  item_nbr: 939207
+  family: DAIRY
+  class: 2130
+  total_units: 1120949.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-02
+  item_nbr: 1083196
+  family: DAIRY
+  class: 2116
+  total_units: 1042217.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-03
+  item_nbr: 838216
+  family: DAIRY
+  class: 2124
+  total_units: 1028140.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-04
+  item_nbr: 1083152
+  family: DAIRY
+  class: 2116
+  total_units: 999689.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-05
+  item_nbr: 866927
+  family: DELI
+  class: 2632
+  total_units: 1159172.0
+  nonzero_week_share: 0.9955
+- sku_id: SKU-06
+  item_nbr: 828630
+  family: DELI
+  class: 2636
+  total_units: 1032874.0
+  nonzero_week_share: 0.9955
+- sku_id: SKU-07
+  item_nbr: 1121615
+  family: DELI
+  class: 2630
+  total_units: 635805.0
+  nonzero_week_share: 0.9729
+- sku_id: SKU-08
+  item_nbr: 319093
+  family: DELI
+  class: 2630
+  total_units: 595032.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-09
+  item_nbr: 885543
+  family: PREPARED FOODS
+  class: 2966
+  total_units: 1198519.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-10
+  item_nbr: 514327
+  family: PREPARED FOODS
+  class: 2986
+  total_units: 1074912.0
+  nonzero_week_share: 0.9819
+- sku_id: SKU-11
+  item_nbr: 426155
+  family: PREPARED FOODS
+  class: 2962
+  total_units: 695714.0
+  nonzero_week_share: 1.0
+- sku_id: SKU-12
+  item_nbr: 557420
+  family: PREPARED FOODS
+  class: 2960
+  total_units: 693063.0
+  nonzero_week_share: 1.0

@@ -1,0 +1,13 @@
+metric,kpi,kind,base,new,estimate,ci_lo,ci_hi,half_width,n,mean_base,mean_new,effect_size_dz,wilcoxon_p
+expired_waste_reduction_pct,expired_cases,reduction_pct,B1_TUNED,OPT,-119.8481,-124.2002,-115.5625,4.3189,200,2656.2692,5839.7587,5.019,0.0
+lost_cases_reduction_pct,lost_cases,reduction_pct,B1_TUNED,OPT,-110.7746,-118.0675,-103.87,7.0987,200,2650.9605,5587.5509,3.2666,0.0
+fill_rate_delta_pts,fill_rate,delta_pts,B1_TUNED,OPT,-0.5567,-0.5803,-0.5333,0.0235,200,0.995,0.9894,-3.2859,0.0
+changeover_hours_reduction_pct,changeover_hours,reduction_pct,B1_TUNED,OPT,45.9727,45.8403,46.1037,0.1317,200,1511.9175,816.8475,-45.5709,0.0
+allergen_clean_hours_reduction_pct,allergen_clean_hours,reduction_pct,B1_TUNED,OPT,54.7769,54.598,54.953,0.1775,200,1259.3175,569.5025,-40.9648,0.0
+evaluated_cost_reduction_pct,evaluated_cost,reduction_pct,B1_TUNED,OPT,1.3891,1.3491,1.4304,0.0407,200,10281306.6667,10138492.0321,-4.7797,0.0
+expired_waste_reduction_pct,expired_cases,reduction_pct,B1,OPT,54.2354,53.4967,54.9911,0.7472,200,12760.4387,5839.7587,-6.0056,0.0
+lost_cases_reduction_pct,lost_cases,reduction_pct,B1,OPT,-48.1493,-53.2833,-43.1895,5.0469,200,3771.5682,5587.5509,1.7086,0.0
+fill_rate_delta_pts,fill_rate,delta_pts,B1,OPT,-0.3442,-0.3713,-0.3161,0.0276,200,0.9928,0.9894,-1.71,0.0
+changeover_hours_reduction_pct,changeover_hours,reduction_pct,B1,OPT,30.1713,29.8853,30.4517,0.2832,200,1169.7875,816.8475,-11.3634,0.0
+allergen_clean_hours_reduction_pct,allergen_clean_hours,reduction_pct,B1,OPT,42.2802,41.9898,42.5709,0.2906,200,986.6675,569.5025,-14.7519,0.0
+evaluated_cost_reduction_pct,evaluated_cost,reduction_pct,B1,OPT,3.0353,2.9795,3.0905,0.0555,200,10455858.3505,10138492.0321,-7.4469,0.0

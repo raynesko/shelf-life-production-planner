@@ -1,0 +1,21 @@
+{
+  "run_id": "ablation_488408cf84",
+  "rows": 804,
+  "n_paths": 200,
+  "seed": 20261118,
+  "arms": [
+    "B1",
+    "B1_SELFC",
+    "OPT_MA4",
+    "OPT"
+  ],
+  "kpi_sha256": "70d1de648b12bad0a0a1ab2aa77202fd68156d561ecf8a33dde76708d7543936",
+  "wall_s": 1951.4,
+  "workers": 14,
+  "checker_violations_total": 0,
+  "fallback_weeks_total": 0,
+  "label": "simulation on a synthetic plant model",
+  "git_hash": null,
+  "git_dirty": true,
+  "source_sha256": "0404b9ffb255f6b079f959317564993c342d17de5d863919aec48f95e29f21c4"
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "main_8fe25e1648",
+  "rows": 402,
+  "n_paths": 200,
+  "seed": 20261118,
+  "arms": [
+    "B1",
+    "OPT"
+  ],
+  "kpi_sha256": "89e42ace4d5c180ee25892d74fd245f355ed0c89325456013150f2aa8cba260c",
+  "wall_s": 967.4,
+  "workers": 14,
+  "checker_violations_total": 0,
+  "fallback_weeks_total": 0,
+  "label": "simulation on a synthetic plant model",
+  "git_hash": null,
+  "git_dirty": true,
+  "source_sha256": "0404b9ffb255f6b079f959317564993c342d17de5d863919aec48f95e29f21c4"
+}

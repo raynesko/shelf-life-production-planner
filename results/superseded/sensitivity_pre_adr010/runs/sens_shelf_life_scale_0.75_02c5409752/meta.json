@@ -1,0 +1,19 @@
+{
+  "run_id": "sens_shelf_life_scale_0.75_02c5409752",
+  "rows": 100,
+  "n_paths": 50,
+  "seed": 20261118,
+  "arms": [
+    "B1",
+    "OPT"
+  ],
+  "kpi_sha256": "9bc2fc88346148ff4119ca0e7bc9d2a4446a79e5e03086bee5c7fe11e73bde5e",
+  "wall_s": 122.3,
+  "workers": 14,
+  "checker_violations_total": 0,
+  "fallback_weeks_total": 0,
+  "label": "simulation on a synthetic plant model",
+  "git_hash": null,
+  "git_dirty": true,
+  "source_sha256": "0404b9ffb255f6b079f959317564993c342d17de5d863919aec48f95e29f21c4"
+}

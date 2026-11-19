@@ -1,0 +1,2 @@
+# Prophet installed cleanly on Windows 3.12 (T1.2.2, ADR-002); kept optional so core install stays light.
+prophet==1.5.0

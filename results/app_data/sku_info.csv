@@ -1,0 +1,13 @@
+sku_id,name,family,allergens,shelf_life_days,max_ship_age_weeks,rate_cases_per_hour,available_hours
+SKU-01,Plain yogurt cup,DAIRY,milk,35,2,360.0,72.0
+SKU-02,Strawberry yogurt cup,DAIRY,milk,35,2,360.0,72.0
+SKU-03,Cream cheese spread,DAIRY,milk,56,4,240.0,72.0
+SKU-04,Dessert pudding cup,DAIRY,"milk, egg",28,2,330.0,72.0
+SKU-05,Classic hummus,DELI,sesame,42,3,270.0,72.0
+SKU-06,Tzatziki dip,DELI,milk,21,1,270.0,72.0
+SKU-07,Basil pesto,DELI,"milk, tree_nuts",28,2,210.0,72.0
+SKU-08,Guacamole,DELI,none,14,1,300.0,72.0
+SKU-09,Pasta salad,PREPARED FOODS,"wheat, egg",14,1,240.0,72.0
+SKU-10,Egg salad,PREPARED FOODS,egg,14,1,270.0,72.0
+SKU-11,Tuna salad,PREPARED FOODS,"fish, egg",14,1,270.0,72.0
+SKU-12,Vegetable soup,PREPARED FOODS,none,21,1,300.0,72.0

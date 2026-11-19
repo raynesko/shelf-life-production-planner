@@ -1,0 +1,40 @@
+# Synthetic plant: hypothetical refrigerated cups-and-tubs manufacturer, ONE filling/packing line (bottleneck).
+# Every parameter has a source: citation URL, or "assumption" with a plausible range (docs/assumptions.md).
+# Demand comes from Favorita (real retail patterns); everything below is NOT real plant data.
+
+line:
+  weekly_available_hours: {value: 72, source: assumption, range: [60, 80]}   # 2 shifts x 5 d x 8 h = 80 gross, less ~8 h planned maintenance/sanitation
+  min_remaining_shelf_life_at_ship: {value: 0.50, source: "assumption (vendor sources suggest 60-75% at customer receipt: see docs/research/domain_brief.md s2)", range: [0.30, 0.70]}
+  horizon_weeks: {value: 13, source: "design choice (S&OP look-ahead)", range: [13, 13]}
+
+changeover_hours:   # used by T2.2.2 to build the matrix; no public per-line dataset known -> assumptions
+  base:            {value: 0.5, source: assumption, range: [0.25, 1.0]}   # label/format/film change
+  routine_clean:   {value: 0.5, source: assumption, range: [0.25, 1.0]}   # flavour change, no allergen implication (added to base)
+  allergen_clean:  {value: 3.0, source: assumption, range: [1.5, 6.0]}    # wet clean + verification (added to base) when i has an allergen not declared on j
+
+sku_defaults:       # applied to all SKUs unless overridden; each has its own source
+  rate_cases_per_hour: {value: 300, source: assumption, range: [150, 450]}
+  unit_cost_per_case:  {value: 18.0, source: assumption, range: [10, 30]}   # cost units (USD-like); NOT used for any resume claim
+  min_run_hours:       {value: 1.5, source: assumption, range: [1.0, 3.0]}
+  max_run_hours:       {value: 24, source: assumption, range: [16, 36]}
+
+# Shelf lives: cross-checked against USDA FoodKeeper (CC0) in docs/research/foodkeeper_crosscheck.md; prepared-food values remain assumptions.
+# Allergen names use the FDA Big 9 vocabulary: milk, egg, fish, crustacean_shellfish, tree_nuts, peanuts, wheat, soy, sesame.
+skus:
+  - {id: SKU-01, name: Plain yogurt cup,      family: DAIRY,          allergens: [milk],            shelf_life_days: 35, rate: 360, allergen_rationale: "milk-only dairy"}
+  - {id: SKU-02, name: Strawberry yogurt cup, family: DAIRY,          allergens: [milk],            shelf_life_days: 35, rate: 360, allergen_rationale: "milk-only dairy"}
+  - {id: SKU-03, name: Cream cheese spread,   family: DAIRY,          allergens: [milk],            shelf_life_days: 56, rate: 240, allergen_rationale: "milk-only dairy"}
+  - {id: SKU-04, name: Dessert pudding cup,   family: DAIRY,          allergens: [milk, egg],       shelf_life_days: 28, rate: 330, allergen_rationale: "custard-style pudding contains milk and egg"}
+  - {id: SKU-05, name: Classic hummus,        family: DELI,           allergens: [sesame],          shelf_life_days: 42, rate: 270, allergen_rationale: "tahini (sesame)"}
+  - {id: SKU-06, name: Tzatziki dip,          family: DELI,           allergens: [milk],            shelf_life_days: 21, rate: 270, allergen_rationale: "yogurt base"}
+  - {id: SKU-07, name: Basil pesto,           family: DELI,           allergens: [milk, tree_nuts], shelf_life_days: 28, rate: 210, allergen_rationale: "cheese and nuts (pine nuts treated as tree nuts here; labelling classification not verified)"}
+  - {id: SKU-08, name: Guacamole,             family: DELI,           allergens: [],                shelf_life_days: 14, rate: 300, allergen_rationale: "allergen-free recipe"}
+  - {id: SKU-09, name: Pasta salad,           family: PREPARED FOODS, allergens: [wheat, egg],      shelf_life_days: 14, rate: 240, allergen_rationale: "pasta (wheat) and mayonnaise dressing (egg)"}
+  - {id: SKU-10, name: Egg salad,             family: PREPARED FOODS, allergens: [egg],             shelf_life_days: 14, rate: 270, allergen_rationale: "egg"}
+  - {id: SKU-11, name: Tuna salad,            family: PREPARED FOODS, allergens: [fish, egg],       shelf_life_days: 14, rate: 270, allergen_rationale: "fish and mayonnaise (egg)"}
+  - {id: SKU-12, name: Vegetable soup,        family: PREPARED FOODS, allergens: [],                shelf_life_days: 21, rate: 300, allergen_rationale: "allergen-free recipe"}
+
+sku_param_sources:   # sources for the per-SKU values above
+  shelf_life_days: {source: "assumption; checked vs USDA FoodKeeper v128 (docs/research/foodkeeper_crosscheck.md): dairy/dips consistent, prepared foods not comparable", range_rule: "-50% to +25% in sensitivity"}
+  rate:            {source: "assumption", range_rule: "150-450 cases/h"}
+  allergens:       {source: "assumption by product type; FDA Big 9 vocabulary (docs/research/domain_brief.md s1)", range_rule: "n/a"}

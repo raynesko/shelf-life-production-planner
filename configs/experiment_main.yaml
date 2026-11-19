@@ -1,0 +1,9 @@
+# Main experiment (T5.1.1). Labels: simulation on a synthetic plant model.
+name: main
+arms: [B1, B1_TUNED, OPT]   # B1_TUNED: cover chosen on validation (ADR-009); headline baseline
+replay: true            # Layer A: real test-year demand
+monte_carlo:
+  n_paths: 200          # chosen from the N=30 pilot (docs/methods/experiments.md)
+  seed: 20261118
+workers: 14
+overrides: {}           # see shelflife.analysis.experiment.Overrides

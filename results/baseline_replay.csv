@@ -1,0 +1,2 @@
+arm,window,from,to,scale_factor,expired_cases,expired_pct,fill_rate,lost_cases,stockout_sku_weeks,changeover_hours,allergen_clean_hours,utilisation,weeks_of_cover,mean_age_ship,end_inventory_cases,capacity_breach_weeks,checker_violations,runtime_s
+baseline_B1,test,2016-04-04,2017-03-27,0.198324,9413.1906,1.7591,0.9943,3019.6358,41.0,1156.5,976.5,0.8246,0.6663,0.6503,6549.3072,0.0,0,0.11

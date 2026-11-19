@@ -1,0 +1,40 @@
+{
+  "description": "3 SKUs x 4 weeks, hand-calculated in tests/fixtures/handcalc.md",
+  "plant": {
+    "sku_ids": ["A", "B", "C"],
+    "shelf_life_days": [14, 28, 21],
+    "rate": [100, 100, 100],
+    "available_hours": 10,
+    "msl": 0.5,
+    "changeover_hours": [[0, 1.0, 1.0], [3.5, 0, 1.0], [3.5, 3.5, 0]],
+    "allergen_clean": [[false, false, false], [true, false, false], [true, true, false]]
+  },
+  "plan": [[[0, 200], [1, 300]], [[1, 100], [2, 200]], [[0, 100]], []],
+  "demand": [[150, 100, 80, 10], [100, 150, 100, 100], [50, 100, 150, 50]],
+  "expected": {
+    "max_ship_age": [1, 2, 1],
+    "per_sku": {
+      "A": {"produced": 300, "shipped": 290, "lost": 50, "expired": 10},
+      "B": {"produced": 400, "shipped": 400, "lost": 50, "expired": 0},
+      "C": {"produced": 200, "shipped": 200, "lost": 150, "expired": 0}
+    },
+    "end_inventory": {"A": [50, 0, 20, 0], "B": [200, 150, 50, 0], "C": [0, 100, 0, 0]},
+    "week": {
+      "run_hours": [5, 3, 1, 0],
+      "changeover_hours": [1.0, 1.0, 3.5, 0],
+      "allergen_clean_hours": [0, 0, 3.5, 0]
+    },
+    "kpis": {
+      "expired_cases": 10,
+      "expired_pct": 1.1111111111,
+      "fill_rate": 0.7807017544,
+      "lost_cases": 250,
+      "stockout_sku_weeks": 5,
+      "changeover_hours": 5.5,
+      "allergen_clean_hours": 3.5,
+      "utilisation": 0.3625,
+      "weeks_of_cover": 0.4601619,
+      "mean_age_ship": 0.6292134831
+    }
+  }
+}

@@ -1,0 +1,33 @@
+[project]
+name = "shelflife"
+version = "0.1.0"
+description = "Shelf-life-aware production planner (forecast + MIP + simulation)"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning"]  # OR-Tools SWIG noise
+
+[tool.ruff]
+line-length = 112
+src = ["src", "tests", "tools", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"backlog/source/tickets.py" = ["E501"]  # long prose strings
+"tools/backlog.py" = ["E501", "E701", "E702", "E741"]  # compact stdlib CLI
+"notebooks/*" = ["E501", "E401", "E702", "I001", "F401", "B905"]  # exploratory notebooks
+"scripts/*" = ["E501"]  # CLI glue: long print/log lines
+"app/**" = ["E501"]  # UI copy and Plotly hover templates
+"scripts/smoke_solvers.py" = ["E501", "E702"]  # throwaway spike script
+"src/shelflife/opt/model.py" = ["E741"]  # I = inventory, standard OR notation

@@ -1,0 +1,9 @@
+# Pilot (T5.1.1) to choose N: same as main with N = 30.
+name: pilot
+arms: [B1, OPT]
+replay: false
+monte_carlo:
+  n_paths: 30
+  seed: 20261118
+workers: 14
+overrides: {}
